@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/test for sceans/GameInformation.unity
+    guid: a38de39cb52462d4aa5ddca489b53ccc
+  - enabled: 1
+    path: Assets/test for sceans/LoadTeastSceans.unity
+    guid: 003160348fb3f1241b7aea654d16a0cc
+  - enabled: 1
+    path: Assets/test for sceans/test for tile set.unity
+    guid: 2f392e36fe432954fbde5b9e5b1b8632

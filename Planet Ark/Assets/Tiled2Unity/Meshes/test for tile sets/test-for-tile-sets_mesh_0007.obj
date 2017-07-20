@@ -1,0 +1,29 @@
+﻿# Tiled2Unity generated file. Do not modify by hand.
+# Wavefront file for 'test-for-tile-sets_mesh_0007.obj'
+
+# Vertices (Count = 8)
+v -25.92 -19.52 0
+v -26.24 -19.52 0
+v -26.24 -19.2 0
+v -25.92 -19.2 0
+v -21.76 -25.6 0
+v -22.08 -25.6 0
+v -22.08 -25.28 0
+v -21.76 -25.28 0
+
+# Texture cooridinates (Count = 4)
+vt 0.0001220703 0.0001220703
+vt 0.09987793 0.0001220703
+vt 0.09987793 0.09987795
+vt 0.0001220703 0.09987795
+
+# Normal
+vn 0 0 -1
+
+# Mesh description
+g test-for-tile-sets_mesh_0007
+
+# Faces
+f 1/1/1 2/2/1 3/3/1 4/4/1
+f 5/1/1 6/2/1 7/3/1 8/4/1
+
