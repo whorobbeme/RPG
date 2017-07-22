@@ -7,16 +7,34 @@ public class PlayerMovement : MonoBehaviour {
 	Rigidbody2D rbody;
 	Animator anim;
 
-	// Use this for initialization
+    private static bool playerExists;
+    private bool playerMoving;  //
+    public Vector2 lastMove;   //
+
+    	// Use this for initialization
 	void Start () {
 
 		rbody = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
 
+        if (!playerExists)
+        {
+            playerExists = true;
+            DontDestroyOnLoad(transform.gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+        playerMoving = false; //
 
 		Vector2 movement_vector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
@@ -24,7 +42,10 @@ public class PlayerMovement : MonoBehaviour {
 			anim.SetBool ("iswalking", true);
 			anim.SetFloat ("input_x", movement_vector.x);
 			anim.SetFloat ("input_y", movement_vector.y);
-		} else {
+            playerMoving = true; //
+            lastMove = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")); //
+
+        } else {
 			anim.SetBool ("iswalking", false);
 		}
 

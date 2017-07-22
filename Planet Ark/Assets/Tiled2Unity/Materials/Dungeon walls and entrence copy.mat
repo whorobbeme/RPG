@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Dungeon walls and entrence copy
-  m_Shader: {fileID: 4800000, guid: 3e2092ac98840f84a90d3dc0e72d7991, type: 3}
+  m_Shader: {fileID: 4800000, guid: 08f50f7d2b3184142a0a78662a5716a9, type: 3}
   m_ShaderKeywords: PIXELSNAP_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
