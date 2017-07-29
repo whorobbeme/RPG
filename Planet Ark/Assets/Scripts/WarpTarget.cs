@@ -6,28 +6,41 @@ public class WarpTarget : MonoBehaviour {
 
 	public Transform warpTarget; // Transform
 
-    // Use this for initialization
-    void Start()
-    {
+    
+    IEnumerator OnTriggerEnter2D(Collider2D other){   //other
 
-    }
+        Debug.Log("An object collided.");
 
-    // Update is called once per frame
-    void Update()
-    {
+        ScreenFader sf = GameObject.FindGameObjectWithTag("Fader").GetComponent<ScreenFader>();
 
-    }
-    void OnTriggerEnter2D(Collider2D player){   //other
-	
-		Debug.Log ("An object collided.");
-		//other.gameObject.transform.position = warpTarget.position;
-		//Camera.main.transform.position = warpTarget.position;
+        Debug.Log("fade out");
 
-        if (player.gameObject.name == "Player") // new warp?
+       // yield return StartCoroutine(sf.FadeToBlack());
+
+        Debug.Log("player position");
+        if (other.gameObject.name == "Player") //
         {
+            yield return StartCoroutine(sf.FadeToBlack()); //
+            other.gameObject.transform.position = warpTarget.position;
+            Camera.main.transform.position = warpTarget.position;
+            yield return StartCoroutine(sf.FadeToClear()); //
+        }
+
+       /* if (player.gameObject.name == "Player") // new warp?
+        {
+           // ScreenFader sf = GameObject.FindGameObjectWithTag("Fader").GetComponent<ScreenFader>();
             player.gameObject.transform.position = warpTarget.position;
             Camera.main.transform.position = warpTarget.position;
-        }
+            yield return StartCoroutine(sf.FadeToBlack());
+
+            
+            yield return StartCoroutine(sf.FadeToClear());
+        }*/
+
+       // yield return StartCoroutine (sf.FadeToClear());
+
+        Debug.Log("fade in");
     }
+
 }
 

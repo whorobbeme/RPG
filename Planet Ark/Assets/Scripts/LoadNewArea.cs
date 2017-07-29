@@ -7,8 +7,13 @@ public class LoadNewArea : MonoBehaviour {
 
     public string levelToLoad;
 
+    public string exitPoint; //Label make the same as pointName
+
+    private PlayerController thePlayer;
+        
 	// Use this for initialization
 	void Start () {
+        thePlayer = FindObjectOfType<PlayerController>();
 		
 	}
 	
@@ -22,6 +27,7 @@ public class LoadNewArea : MonoBehaviour {
         if (other.gameObject.name == "Player")
         {
             SceneManager.LoadScene(levelToLoad);
+            thePlayer.startPoint = exitPoint;
         }
     }
 }

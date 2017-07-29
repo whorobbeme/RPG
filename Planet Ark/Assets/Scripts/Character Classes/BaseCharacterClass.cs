@@ -2,18 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseCharacterClass
+public class BaseCharacterClass : MonoBehaviour
+
 {
 
     private string characterClassName;
     private string characterClassDescription;
 
     //Stats
-    private int strength = 8;
-    private int dexterity = 8;
-    private int intellegence = 8;
-    private int charisma = 8;
-    private int luck = 8;
+    public int strength = 8;
+    public int dexterity = 8;
+    public int intellegence = 8;
+    public int charisma = 8;
+    public int luck = 8;
+
+
 
     public enum MainStatBonuses
     {
@@ -87,4 +90,5 @@ public class BaseCharacterClass
         get { return luck; }
         set { luck = value; }
     }
+    
 }

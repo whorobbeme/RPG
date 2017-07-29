@@ -25,6 +25,8 @@ GameObject:
   - component: {fileID: 114570922460480118}
   - component: {fileID: 50779238511174658}
   - component: {fileID: 114951145592879256}
+  - component: {fileID: 114183133250894064}
+  - component: {fileID: 114434881807505506}
   m_Layer: 0
   m_Name: Green Slime
   m_TagString: Untagged
@@ -97,6 +99,34 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114183133250894064
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1468218249328592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cc710d62c9e1a04a8d4dd7e1143d1b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageToGive: 2
+  damageNumber: {fileID: 1678682391185664, guid: 9d5accf68eeb58641b0251429de29cdd,
+    type: 2}
+--- !u!114 &114434881807505506
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1468218249328592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 539a5b5d05895f544b5934b084e09d53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 10
+  CurrentHealth: 0
+  expToGive: 15
 --- !u!114 &114570922460480118
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111,6 +141,7 @@ MonoBehaviour:
   moveSpeed: 0.2
   timeBetweenMove: 0.2
   timeToMove: 4
+  waitToReload: 0
 --- !u!114 &114951145592879256
 MonoBehaviour:
   m_ObjectHideFlags: 1

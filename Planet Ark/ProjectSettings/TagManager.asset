@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Fader
   layers:
   - Default
   - TransparentFX
@@ -44,4 +45,10 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 222104429
+    locked: 0
+  - name: world
+    uniqueID: 1555374699
+    locked: 0
+  - name: UI
+    uniqueID: 1969508443
     locked: 0

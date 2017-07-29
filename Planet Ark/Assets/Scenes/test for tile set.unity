@@ -206,7 +206,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5ad3b0820e692740941b80acb546288, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startDirection: {x: 1, y: 0}
+  startDirection: {x: -1, y: 0}
+  pointName: test for tile set
 --- !u!1 &1137106329
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,6 +307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelToLoad: new scene for depth test and placement of objests
+  exitPoint: new scene for depth test and placement of objests
 --- !u!61 &1322021048
 BoxCollider2D:
   m_ObjectHideFlags: 0
