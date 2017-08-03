@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour {
     public float diagonalMoveModifier;
 
 
-    private Animator anim;
+    private Animator anim;  // for animation
     private Rigidbody2D myRigidbody;
    // Rigidbody2D rbody;
 
@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>(); // for animation
         myRigidbody = GetComponent<Rigidbody2D>();
         //rbody = GetComponent<Rigidbody2D>();
         //anim = GetComponent<Animator>();
@@ -110,7 +110,7 @@ public class PlayerController : MonoBehaviour {
                 
         }
 
-            anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal")); //tells the animation to play
+        anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal")); //tells the animation to play
         anim.SetFloat("MoveY", Input.GetAxisRaw("Vertical"));
         anim.SetBool("PlayerMoving", playerMoving);
         anim.SetFloat("LastMoveX", lastMove.x);
